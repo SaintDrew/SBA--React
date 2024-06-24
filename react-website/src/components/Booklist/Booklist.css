@@ -34,7 +34,6 @@
 .book-item-info-item:not(.book-item-info-item.title) span:last-child{
     opacity: 0.8;
 }
-
 @media screen and (min-width: 600px){
     .booklist-content{
         grid-template-columns: repeat(2, 1fr);

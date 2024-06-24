@@ -2,7 +2,7 @@ import React, {useRef, useEffect} from 'react';
 import {FaSearch} from "react-icons/fa";
 import { useNavigate } from 'react-router-dom';
 import { useGlobalContext } from '../../context.';
-import "./SearchForm.css";
+import "./SearchForm";
 
 const SearchForm = () => {
   const {setSearchTerm, setResultTitle} = useGlobalContext();
@@ -14,7 +14,7 @@ const SearchForm = () => {
     e.preventDefault();
     let tempSearchTerm = searchText.current.value.trim();
     if((tempSearchTerm.replace(/[^\w\s]/gi,"")).length === 0){
-      setSearchTerm("48 hours of power");
+      setSearchTerm("48 laws of power");
       setResultTitle("Please Enter Something ...");
     } else {
       setSearchTerm(searchText.current.value);
@@ -40,3 +40,5 @@ const SearchForm = () => {
     </div>
   )
 }
+
+export default SearchForm
